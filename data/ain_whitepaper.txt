@@ -1,0 +1,230 @@
+AI Network White Paper
+Open Source to Open Resource
+
+
+Last updated on April 29th, 2021
+
+
+
+
+Contents
+
+
+Introduction        1
+Problem Statement        2
+Open Resource Initiative        2
+Introducing AI Network        5
+The AI Network Blockchain        6
+AI Network Currency        7
+AI Network Governance        9
+AI Network Roadmap        10
+How to contribute to AI Network        10
+Conclusion        11
+Importance Notice        12
+
+
+
+
+
+
+
+
+Introduction
+
+
+AI Network is a global backend infrastructure that transforms millions of open source projects into live services (a.k.a. Open Resource).
+
+
+This document outlines our plans for a real-time, event-driven blockchain platform that aims to initiate innovation in the decentralized application economy, particularly for AI programs.
+Problem Statement
+
+
+The advent of the Open Source movement provided an opportunity for anyone to freely access, distribute, and modify the software. Since the GNU Project by Richard Stallman in 1983, it has become possible to run computers using only free, Open Source software. Today, even giant technology companies have begun open sourcing their code to enable developers to contribute to their services. 
+
+
+Despite this progress, a growing number of Open Source projects are not instantly executable in a regular developer’s environment. This is because the source code is developed on different types of computers in different runtime environment (i.e., IoT),  and programs require vast amounts of resources or specialized hardware such as GPUs or TPUs (i.e., Machine Learning). Back in 1983, Stallman envisaged that anyone should be able to augment programs that were initially written by other developers. If a small number of developers can run a program, this will prevent other developers from offering contributions to the Open Source project and impede progress of the project.
+
+
+Open Resource Initiative
+
+
+We propose "Open Resource" as the next evolutionary milestone of Stallman's initial Open Source initiative. Open Resource starts by decoupling the role of developers from the role of resource providers. Developers should be able to upload their programs on the open network freely, and resource providers should only be concerned with operating the program and sharing the revenue in return. By decoupling these two responsibilities, liability and cost of resource management will no longer belong to developers. The AI Network blockchain will serve as a bridge between the program and the resource, offering a stable way to utilize Open Source solutions.
+
+
+
+
+  
+
+Fig 1. Decoupling the role of resource providers from the role of developers can boost the number of programs published as developers no longer have to worry about maintaining application runtime environments.
+
+
+Through this shift towards Open Resource, we expect composability and interoperability of solutions to be significantly improved. Developers currently make use of third-party solutions through the API economy, which exposes organizations’ digital assets via application programming interfaces (APIs). However, there are two salient problems with the current API economy :
+
+
+* There currently exists no sound payment system for computers to pay with for the globalized micro API executions.
+* Ownership belongs to API providers, allowing these providers to change charging policies or service structures at any time. 
+
+
+  
+
+Fig 2. AS-IS: Each company is building its own AI solutions from scratch. Although lots of solutions are utilizing open source code, they are contained in the company's stack and cannot be shared externally. 
+
+
+
+
+  
+
+Fig 3. TO-BE: Components are shared as a service on the blockchain, and do not need to be separately deployed every time.
+
+
+Blockchains and cryptocurrencies have a few unique properties that can potentially address some of the problems of API ownership. Blockchains ensure that no single participant controls the solution and allows anybody to utilize services on a blockchain through a protected access channel.
+
+
+However, the performance of existing blockchain systems is not powerful enough to serve mainstream cloud services. Mass-market usage of existing blockchains is mainly focusing on financial use cases. To date, even the most elegant solution available is not scalable enough for general purpose computing. We believe that a highly concurrent system built upon trusted frameworks can deliver a lower-cost, more accessible, and more connected global cloud network.
+
+
+The followings are our beliefs and motivations for Open Resource initiative.
+
+
+* We believe that creative implementations of novel ideas should be publishable by developers, without consideration for computational resource restrictions.
+* We believe that global, open, instant, low-cost, ownerless service will create immense opportunities for hosting programs globally.
+* We believe that a global backend infrastructure should be designed and governed, just as public utilities.
+* We believe that we all have a responsibility to help support ethical engineers and continuously uphold the integrity of the AI ecosystem. Integrity is especially crucial for immutable programs, which can only be killed by a consensus across all nodes.
+
+
+Introducing AI Network
+
+
+AI Network is a new kind of cloud service platform built on the foundation of blockchain technology. Through this novel infrastructure, microservices developed by individual developers can be instantly integrated into the network of computers. AI Network has three characteristics to create a more intuitive backend system:
+
+
+1. It is built on a concurrent, scalable, and reliable blockchain.
+2. It is designed to serve applications, with quality guaranteed through a decentralized contract between developers and resource providers.
+3. It is governed by the independent developer community, which aims to contribute to the evolution of the Open Source community.
+
+
+Imagine an open, interoperable ecosystem of cloud services, built by developers and organizations to help operate global applications that people use on a daily basis. No single company owns these applications. Instead, developers all over the world contribute small parts of applications, thus making constant small improvements to the global applications that people around the world use every day. In order to achieve this long-term vision, the blockchain is built from the ground up to prioritize scalability, concurrency, and efficiency in computational throughput.
+
+
+The AI Network currency is achieved through the “AI Network Blockchain.” Our ecosystem's unit of currency is called “AIN.” AIN needs to be reserved when accessing deployed services on blockchain. To have confidence that its value will remain relatively stable over time, solution providers and resource providers agree on contracts, and a certain amount of AIN is deposited in order to guarantee this contract. Through these contracts, a significant portion of AIN will be deposited on blockchain building trust in its intrinsic value.
+
+
+While the AI Network teams play a crucial role in the initial stage of the AI Network Blockchain protocol, the community of developers and resource providers hold the final decision-making authority. AI Network Blockchain is an open source project, which allows millions of open source projects to maintain their services online.
+
+
+AI Network blockchain is a permissionless blockchain, which means any computer in the world is free to participate as a validator node or a resource provider. Validators are responsible for verifying communication between developers and resource providers. Developers who initiate services are capable of configuring permission settings. This means only entities that meet specific requirements can be resource nodes for a certain deployed program. In summary, the AI Network blockchain composed of permissionless nodes records rules for service communication, and programs are then executed off the blockchain by resource providers who monitor the blockchain, following the communication rules agreed on the blockchain.
+The AI Network Blockchain
+
+
+The AI Network Blockchain is designed to provide secure access to computers connected to the network. This secure network will form a serverless computing architecture by utilizing accessible computers in the network. This section will highlight three requirements regarding the AI Network Blockchain:
+
+
+1. Capable of processing any general programming language.
+2. Capable of hosting heterogeneous types of clouds ranging from mobile phones to supercomputers.
+3. Real-time responses to transactions via asynchronous execution.
+
+
+The goal of AI Network is to serve millions of open source projects. As such, the AI Network is designed for operating different types of software on the most suitable runtime environment. If the project is about deep learning, it might need a high performance GPU, or if the project is about sensor network, it might need millions of small computers. Ethereum supports only one type of language called Solidity and its runtime environment is called EVM. AI Network runs a variety of languages on heterogeneous types of runtime environments. We refer to these environments as Secure Runtime Environment, or SRE for short. AI Network does not have a native smart contract language such as Solidity. Instead, workers in resource provider pools are listening to blockchain events to participate in the execution. Thus, blockchain’s responsibility is narrowed down to propagating real-time events, and recording life cycle of executions.
+
+
+Unlike the synchronous execution of the smart contract, the AI network prioritizes real-time execution over preserving execution order. This post-consensus protocol enables high transaction throughput, low latency, and high concurrency in processing transactions. AI Network’s execution can be asynchronous, and the arrival of results may be different from the initiation order. Later results may get interrupted and dropped. As such, the blockchain plays a vital role in maintaining a consensus and keeping the consistent state among lists of conflicting executions. 
+
+
+AI Network Blockchain maintains a single tree data structure in a key-value storage that records the states from the complete history of transactions. This implementation simplifies the work of applications accessing the blockchain, allowing them to read the specific part of the data in a unified schema.
+
+
+The blockchain wallet normally gives access to a user’s money, managing keys and addresses, creating and signing transactions. In the world of financial blockchains, users are humans, and addresses are for managing assets of humans. The AI Network wallet is for computers, and one computer unit holds one payable address. In addition to the payment system, this address serves as an access key for computing resources of the node. For example, it is possible to open a shell connection to the node on the blockchain using the wallet as a secure connection scheme.
+
+
+AI Network Currency
+
+
+The AI Network currency is a digital currency designed both for humans and computers. It is designed to make computational costs more measurable. Using the blockchain protocol, AIN maintains stability during the execution of services by reserving computational power for a specific duration of time. This means that anyone with AIN coins has a high degree of certainty that they can use their digital currency for accessing valuable backend services.
+
+
+This also means that one AIN will not always guarantee some fixed amount of GPUs or CPUs. Instead, the value of one AIN may fluctuate along with the value of the total computing power and solutions in the network. However, since contracts always hold a significant amount of total AIN at any time, the volatility of the currency should be minimal. Therefore AIN holders can trust the currency’s ability to preserve value for processing agreed numbers of requests offered by the resource provider.
+
+
+Fundamentally, an AIN token is a utility token that is used to purchase certain services available on the blockchain. In order to provide a stable service, the developer of the service initiates the contract with resource providers. Resource providers may then make a deposit, guaranteeing resource usage for a specific amount of time. After the contract, the resource provider can share the revenue of the service. This contract enables applications to have a stable backend, and decouples service quality from AIN price fluctuation. Eventually, depositing in contracts will play a pivotal role in currency stabilization, allowing AIN to maintain consistent intrinsic value.
+
+
+
+
+
+
+
+
+
+
+  
+
+Fig 4. Staking pool ensures quality and accountability for contract stakeholders.
+
+
+AIN is charged when executing the program, and the executor can be application users, developers, or another program. The mechanism of the program execution is described by a job specification. The executor of the program who uses the service also has an option of preemptive buying. With this option, the executor will be able to reserve usage of services from a specific resource provider at a fixed AIN price for a fixed period, as well as to eliminate the risk of AIN price fluctuation during execution. 
+
+
+In summary, AIN tokens can be used to secure stable resources. Service qualities such as real-timeliness and queries per second (QPS) are guaranteed through executors’ and resource providers’ deposits. Paying for requests in batches reduces unnecessary microtransactions and prevents price fluctuation.
+
+
+
+
+AI Network Governance
+
+
+AI Network Governance is designed for AI Network Blockchain to be a global application backend that empowers millions of Open Source projects. The governing entity is the AI Network Pte Ltd, headquartered in Singapore. The organization is built to facilitate the operation, promotion, and development of the AI Network Blockchain through a consensus among the network’s validator nodes, developers, and resource providers.
+
+
+The organization will aid in keeping AI Network’s participants in alignment with the network’s technical roadmap and development goals. One of the main responsibilities of AI Network is to establish sustainable operation of AI Network open source projects as a non-profit entity. AI Network open source projects grow with the collaboration of decentralized communities based on contribution guidelines and protocols. 
+
+
+Once we have enough usage volume in the network, the organization will put the effort in developing an algorithm for measuring the network value of AI Network. The developer committee will accept one of the proposed solutions, and the agreed algorithm will be constantly upgraded. Coins are only minted when the algorithm agrees that total computing power in the AI Network has grown enough to warrant the minting of additional coins. The algorithm may also decide to burn AIN if total computing power utilized throughout AI Network services has degraded significantly. The official ERC-20 token contract for AIN token can be found at https://ainetwork.ai. Once the AI Network blockchain is launched, AIN ERC-20 can be swapped 1:1 with the main-net AIN. The initial total supply of AIN is 700,000,000 AIN. AIN Tokens are for developers of the AI Network Blockchain, and incentives for early participants such as AI solution providers, computing resource providers, and validators. The detailed distribution plan can be found in https://ainetwork.ai/token.
+
+
+AI Network Roadmap
+
+
+Currently a testnet of the AI Network blockchain has been and the AI Network main-net will be launched by the end of 2021.
+
+
+In the following months, AI Network will work with its community to gather feedback on the AI Network Blockchain prototype, and develop it further to a production-ready state. In particular, this work will focus on ensuring the reliability, performance, and scalability of the protocol and implementation.
+
+
+* The detailed technical paper that describes the blockchain for real-time cloud computing can be found in https://docs.ainetwork.ai.
+* The detailed tutorials and API documents for developers to build real-time dApps using well-defined blockchain protocols can be found in https://docs.ainetwork.ai.
+* The AI Network will create a framework for the collaborative development of the technology behind the AI Network Blockchain, using the open source community. 
+* The AI Network will continuously monitor the performance of blockchain using various tests such as integration tests, stress tests, and latency tests in collaboration with entities such as AI researchers and cloud service providers.
+* The AI Network will work to foster the development of runtime environments to support popular programming languages and machine learning frameworks. AI Network will also provide an in-depth guide for developers to deploy customized runtime environments and programs on the blockchain.
+How to contribute to AI Network
+
+
+The AI Network envisions a diverse network of runtime environments for developers building applications and services globally. Together, we want to enable any developer or an IT company to have affordable and instant access to collaborative application backend. For example, as soon as a developer working individually publishes the code to an Open Source repository, their code is instantly integrated into live services on the AI Network.
+
+
+This is merely the beginning of our grand journey, and we ask the members of our community to help, and contribute to our vision. If you believe in what AI Network could do for millions of open source projects around the world, share your perspective and join in.
+* AI Network testnet is available in https://github.com/ainblockchain. Community members can provide feedback instantly. We are committed to undergoing a community-oriented development process, motivating developers to engage in our platform.
+* If your organization is interested in becoming an early resource provider, sign up for an invitation here.
+* If you are interested in converting Open Source project into Open Resource project as early as possible, sign up for an invitation here.
+Conclusion
+
+
+Reliable decentralized backend infrastructure can genuinely deliver the promise of a  “World Computer.” 
+AI Network is a collaborative backend for open source projects built on top of a scalable and stable blockchain, powered by diverse resource providers around the world, and governed by a global developer community. Together, we hope to rediscover the collaborative power of open source, and solve some of the world's most difficult problems.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,32 @@
+{
+  "name": "ain-chat-demo",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "debug": "node --inspect-brk ./node_modules/next/dist/bin/next",
+    "test": "mocha -r esm --exit test/*.test.js"
+  },
+  "dependencies": {
+    "@ainblockchain/ain-js": "^1.1.5",
+    "@ainblockchain/ain-util": "^1.1.6",
+    "babel-preset-next": "^1.4.0",
+    "express": "^4.17.1",
+    "next": "^10.0.0",
+    "react": "16.13.1",
+    "react-burger-menu": "^3.0.6",
+    "react-dom": "16.13.1",
+    "react-focus-lock": "^2.5.2",
+    "string-similarity": "^4.0.4",
+    "styled-components": "^5.3.1",
+    "swr": "^0.5.6"
+  },
+  "devDependencies": {
+    "babel-plugin-styled-components": "^1.13.2",
+    "chai": "^4.3.4",
+    "esm": "^3.2.25",
+    "mocha": "^9.1.1"
+  }
+}
