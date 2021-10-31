@@ -7,4 +7,4 @@ This is a demo of building a chat application with [AIN](https://ainetwork.ai/) 
 ```bash
 npm run dev
 ```
-If you are interested in building iNFT email us at [kimminhyun@ainetwork.ai](mailto:kimminhyun@ainetwork.ai).
+If you are interested in building AINFT email us at [kimminhyun@ainetwork.ai](mailto:kimminhyun@ainetwork.ai).
