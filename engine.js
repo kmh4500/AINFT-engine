@@ -32,7 +32,8 @@ async function inference(str){
   const token_ids = await tokenizer(str)
   const generate_ids = await API_request(token_ids)
   const description = (await postprocessing(generate_ids))["0"].text
-  return description.replace(str, '').trim()
+  const lastIndex = description.lastIndexOf("AIN:")
+  return description.substring(lastIndex + 4).trim()
 }
 
 async function generate(context, text) {

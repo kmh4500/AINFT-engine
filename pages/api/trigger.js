@@ -40,7 +40,8 @@ export default async function handler(req, res) {
       let user_context = user_context_dict[context_key] || ''
       let match = stringSimilarity.findBestMatch(value.message, context_whitepaper)
       let whitepaper_context = match.bestMatch.target + match.ratings[getRandomInt(match.ratings.length)].target
-      let context = whitepaper_context + user_context
+      let context = whitepaper_context + ' ' + user_context
+      context = context.trim()
       return ainClient.getResponse(ref).then(async (result) => {
         console.log('[previous response]', result)
         console.log('[context]', context)
@@ -50,14 +51,12 @@ export default async function handler(req, res) {
           console.log('[response]', response)
           if (response) {
             ainClient.sendResponse(ref, response)
-            user_context += value.message
-            user_context += response
+            user_context += value.message + ' '
             const MAX_LEN = 500
             if (user_context.length > MAX_LEN) {
-              user_context = user_context.substring(context.length - MAX_LEN, context.length);
+              user_context = user_context.substring(user_context.length - MAX_LEN, user_context.length);
             }
-
-            user_context_dict[context_key] = context
+            user_context_dict[context_key] = user_context
             res.status(200).send(response.data);
           } else {
             res.status(404).send('no response from engine');

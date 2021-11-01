@@ -63,19 +63,19 @@ const initTxList = [
         }
       }
     },
-    nonce: -1 
+    nonce: -1
   },
   {
     operation: {
       type: 'SET_FUNCTION',
-      ref: CHAT_DB_PATH + '/ainetwork/$key' ,
+      ref: CHAT_DB_PATH + '/AIN/$key/$time' ,
       value: {
         '.function': {
-          'gpt3-inft-0': {
+          'gpt2-ainft-0': {
             "function_type": "REST",
             "event_listener": "https://events.ainetwork.ai/trigger",
-            "service_name": "ain-functions-gpt3",
-            "function_id": "gpt3-inft-0"
+            "service_name": "ain-functions-gpt2",
+            "function_id": "gpt2-ainft-0"
           }
         }
       }
@@ -85,9 +85,9 @@ const initTxList = [
   {
     operation: {
       type: 'SET_VALUE',
-      ref: CHAT_DB_PATH + '/minhyun/202107112048',
+      ref: CHAT_DB_PATH + '/ain/minhyun/202107112048',
       value: {
-        'minhhyun': {user:'minhyun', message: 'How are you?'},
+        'minhhyun': {message: 'How are you?'},
       }
     },
     nonce: -1
