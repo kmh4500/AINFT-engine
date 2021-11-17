@@ -7,4 +7,7 @@ This is a demo of building a chat application with [AIN](https://ainetwork.ai/) 
 ```bash
 npm run dev
 ```
+
+Talk to AIN at [https://miniverse.afan.ai/ain](https://miniverse.afan.ai/ain)
+
 If you are interested in building AINFT email us at [kimminhyun@ainetwork.ai](mailto:kimminhyun@ainetwork.ai).
