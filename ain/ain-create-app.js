@@ -7,6 +7,8 @@ const priavetKey = '961aa6589eaa38dbcd3af2f3187af204f8b06d189c1f7f183ddea79cf55c
 const address = ainUtil.toChecksumAddress(ain.wallet.add(priavetKey));
 const MANAGE_APP_PATH = '/manage_app/chat'
 const CHAT_DB_PATH = "/apps/chat"
+const CHAT_NAME = "elon"
+const FUNCTION_NAME = "gpt2-elon-0"
 
 ain.wallet.setDefaultAccount(address);
 
@@ -68,14 +70,13 @@ const initTxList = [
   {
     operation: {
       type: 'SET_FUNCTION',
-      ref: CHAT_DB_PATH + '/AIN/$key/$time' ,
+      ref: CHAT_DB_PATH + `/${CHAT_NAME}/$key/$time` ,
       value: {
         '.function': {
-          'gpt2-ainft-0': {
+          [FUNCTION_NAME] : {
             "function_type": "REST",
-            "event_listener": "https://events.ainetwork.ai/trigger",
-            "service_name": "ain-functions-gpt2",
-            "function_id": "gpt2-ainft-0"
+            "function_url": "https://events.ainetwork.ai/trigger",
+            "function_id": `${FUNCTION_NAME}`
           }
         }
       }
@@ -85,7 +86,7 @@ const initTxList = [
   {
     operation: {
       type: 'SET_VALUE',
-      ref: CHAT_DB_PATH + '/ain/minhyun/202107112048',
+      ref: CHAT_DB_PATH + `/${CHAT_NAME}/minhyun/202107112048`,
       value: {
         'minhhyun': {message: 'How are you?'},
       }

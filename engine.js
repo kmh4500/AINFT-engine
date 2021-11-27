@@ -1,6 +1,7 @@
 
 const axios = require('axios');
 axios.defaults.headers.post['Content-Type'] = 'application/json';
+const NAME = "Elon"
 
 exports.complete = (context, text) => {
   return generate(context, text)
@@ -14,10 +15,10 @@ async function tokenizer(str){
 
 async function API_request(ids){
   return await axios.post(
-    "https://train-rrm6nquw776trr2t0zih-gpt2-train-teachable-ainize.endpoint.ainize.ai/predictions/gpt-2-en-large-finetune"
+    "https://train-v67ns1zmtl1wi3m8xpaq-gpt2-train-teachable-ainize.endpoint.ainize.ai/predictions/gpt-2-en-large-finetune"
     , `{
   "text": ${JSON.stringify(ids)},
-  "num_samples": 1,
+  "num_samples": 5,
   "length": 256
 }` ).then(r=>r.data)
 }
@@ -28,16 +29,42 @@ async function postprocessing(ids){
     , `${JSON.stringify(ids)}` ).then(r=>r.data)
 }
 
+function count_unallowed_char(str) {
+  mat = str.match(/[^a-zA-Z\s\?\.0-9',-]/g)
+  if (mat) {
+    return mat.length
+  }
+  return 0
+}
+
 async function inference(str){
   const token_ids = await tokenizer(str)
   const generate_ids = await API_request(token_ids)
-  const description = (await postprocessing(generate_ids))["0"].text
-  const lastIndex = description.lastIndexOf("AIN:")
-  return description.substring(lastIndex + 4).trim()
+  let descriptions = (await postprocessing(generate_ids)) // ["0"].text
+  for (let index in descriptions) {
+    let text = descriptions[index].text
+    text = text.replace(/<\|endoftext\|>/g, "")
+    const lastIndex = text.lastIndexOf(`${NAME}:`)
+    text = text.substring(lastIndex + NAME.length + 2).trim()
+    text = text.split(/\n/)[0]
+    descriptions[index] = text
+  }
+  console.log(descriptions)
+  let best = descriptions[0]
+  let best_unallowed = count_unallowed_char(best)
+  for (const index in descriptions) {
+    let description = descriptions[index]
+    let unallowed = count_unallowed_char(description)
+    if (unallowed < best_unallowed || (unallowed == best_unallowed && description.length > best.length)) {
+      best = description
+      best_unallowed = unallowed
+    }
+  }
+  return best
 }
 
 async function generate(context, text) {
-  return inference(`Context: ${context}\nHuman: ${text}\nAIN:`)
+  return inference(`Human: ${text}\n${NAME}:`)
 }
 
 // for testing. node engine.js
