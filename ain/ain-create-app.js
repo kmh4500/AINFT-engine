@@ -7,7 +7,7 @@ const priavetKey = '961aa6589eaa38dbcd3af2f3187af204f8b06d189c1f7f183ddea79cf55c
 const address = ainUtil.toChecksumAddress(ain.wallet.add(priavetKey));
 const MANAGE_APP_PATH = '/manage_app/chat'
 const CHAT_DB_PATH = "/apps/chat"
-const CHAT_NAME = "elon"
+const CHAT_NAME = "Elon"
 const FUNCTION_NAME = "gpt2-elon-0"
 
 ain.wallet.setDefaultAccount(address);

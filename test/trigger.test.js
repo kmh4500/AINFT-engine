@@ -94,3 +94,36 @@ describe("trigger tests", () => {
   }).timeout(100000);
 
 });
+
+/*
+
+curl -d '{
+  "function": {
+    "function_id":"gpt2-elon-0"
+  },
+  "transaction":{
+    "nonce":123,
+    "timestamp":1566736760322,
+    "operation":{
+      "ref":"/apps/chat/Elon/kmh4500/1566736760322",
+      "type":"SET_VALUE",
+      "value": {"message": "Hi"}
+    }
+  }}' -H "Content-Type: application/json" -X POST https://events.ainetwork.ai/trigger
+
+Sample POST 
+http://localhost:3000/api/trigger
+  {
+	"transaction": {
+	    "tx_body":{
+	      "nonce":123,
+	      "timestamp":1566736760322,
+	      "operation":{
+	        "ref":"/apps/chat/Elon/kmh4500/1566736760322",
+	        "type":"SET_VALUE",
+	        "value":{"message": "Hi"}
+	      }
+	    }
+	}
+}
+*/
