@@ -1,6 +1,6 @@
 
 const Ain = require('@ainblockchain/ain-js').default;
-const ain = new Ain('http://node.ainetwork.ai:8080');
+const ain = new Ain('https://testnet-api.ainetwork.ai)');
 const ainUtil = require('@ainblockchain/ain-util');
 
 const priavetKey = '961aa6589eaa38dbcd3af2f3187af204f8b06d189c1f7f183ddea79cf55c262f'
