@@ -1,6 +1,6 @@
 
 const Ain = require('@ainblockchain/ain-js').default;
-const ain = new Ain('http://node.ainetwork.ai:8080');
+const ain = new Ain('https://testnet-api.ainetwork.ai');
 const account = ain.wallet.create(1);
 const myAddress = account[0];
 const CHAT_DB_PATH = "/apps/chat/"
