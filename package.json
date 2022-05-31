@@ -10,8 +10,8 @@
     "test": "mocha -r esm --exit test/*.test.js"
   },
   "dependencies": {
-    "@ainblockchain/ain-js": "^1.1.5",
-    "@ainblockchain/ain-util": "^1.1.6",
+    "@ainblockchain/ain-js": "^1.3.1",
+    "@ainblockchain/ain-util": "^1.1.9",
     "babel-preset-next": "^1.4.0",
     "express": "^4.17.1",
     "next": "^10.0.0",
