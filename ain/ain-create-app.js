@@ -74,7 +74,6 @@ const initTxList = [
           'gpt2-ainft-0': {
             "function_type": "REST",
             "function_url": "https://events.ainetwork.ai/trigger",
-            "service_name": "ain-functions-gpt2",
             "function_id": "gpt2-ainft-0"
           }
         }
