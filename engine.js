@@ -1,7 +1,7 @@
 
 const axios = require('axios');
 axios.defaults.headers.post['Content-Type'] = 'application/json';
-const NAME = "Elon"
+const NAME = "Yeoreum"
 
 exports.complete = (context, text) => {
   return generate(context, text)
@@ -15,7 +15,7 @@ async function tokenizer(str){
 
 async function API_request(ids){
   return await axios.post(
-    "https://train-v67ns1zmtl1wi3m8xpaq-gpt2-train-teachable-ainize.endpoint.ainize.ai/predictions/gpt-2-en-large-finetune"
+    "https://train-zlu2oxt38g4y1dnd7srr-gpt2-train-teachable-ainize.endpoint.ainize.ai/predictions/gpt-2-en-large-finetune"
     , `{
   "text": ${JSON.stringify(ids)},
   "num_samples": 5,
@@ -64,7 +64,7 @@ async function inference(str){
 }
 
 async function generate(context, text) {
-  return inference(`Human: ${text}\n${NAME}:`)
+  return inference(`ETERNAL: ${text}\n${NAME}:`)
 }
 
 // for testing. node engine.js
